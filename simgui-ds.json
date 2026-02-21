@@ -1,14 +1,4 @@
 {
-  "Joysticks": {
-    "window": {
-      "visible": false
-    }
-  },
-  "System Joysticks": {
-    "window": {
-      "enabled": false
-    }
-  },
   "keyboardJoysticks": [
     {
       "axisConfig": [
@@ -22,7 +12,7 @@
         },
         {
           "decKey": 69,
-          "decayRate": 0.0,
+          "decayRate": 0.0010000000474974513,
           "incKey": 82,
           "keyRate": 0.009999999776482582
         }
@@ -97,6 +87,11 @@
       "axisCount": 0,
       "buttonCount": 0,
       "povCount": 0
+    }
+  ],
+  "robotJoysticks": [
+    {
+      "guid": "Keyboard0"
     }
   ]
 }

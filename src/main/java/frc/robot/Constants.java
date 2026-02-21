@@ -152,6 +152,23 @@ public static final class IntakeConstants {
   public static final double ROLLER_SUPPLY_LIMIT_A = 60.0;
 }
 
+public static final class IndexerConstants {
+  private IndexerConstants() {}
+
+  // CAN IDsj
+  public static final int BELTER_ID = 15;
+
+  // Output
+  public static final double BELT_PERCENT = 1.0;
+
+  // Invert
+  public static final boolean BELT_INVERTED = true;
+
+  // Current limit (safe)
+  public static final double BELT_SUPPLY_LIMIT_A = 60.0;
+}
+
+
 
 public static final class IntakePivotConstants {
   private IntakePivotConstants() {}

@@ -19,6 +19,9 @@ import frc.robot.Constants;
 import frc.robot.subsystems.shooterhood.HoodIO;
 import frc.robot.subsystems.shooterhood.HoodIOTalonFX;
 
+import frc.robot.subsystems.indexer.IndexerIO;
+import frc.robot.subsystems.indexer.IndexerIOTalonFX;
+
 @Logged
 public class ShooterSubsystem extends SubsystemBase {
 
@@ -34,6 +37,9 @@ public class ShooterSubsystem extends SubsystemBase {
 
   private final HoodIO hoodIO = new HoodIOTalonFX();
   private final HoodIO.HoodIOInputs hoodInputs = new HoodIO.HoodIOInputs();
+
+  private final IndexerIO indexerIO = new IndexerIOTalonFX();
+  private  final IndexerIO.IndexerIOInputs indexerInputs = new IndexerIO.IndexerIOInputs();
 
   private final PhotonCamera camera = new PhotonCamera(Constants.VisionConstants.CAMERA_NAME);
 
@@ -239,9 +245,9 @@ private double calcHoodRotFromDistance(double distM) {
         targetTopRps = top;
         targetBottomRps = bot;
         targetFeedRps = feed;
-      
-        
 
+        indexerIO.setBeltPercent(Constants.IndexerConstants.BELT_PERCENT);
+      
         double dist = getDistanceToTagMeters();
         targetHoodRot = calcHoodRotFromDistance(dist);
       }
@@ -292,5 +298,6 @@ SmartDashboard.putNumber(
   public void simulationPeriodic() {
     shooterIO.simulationPeriodic();
     hoodIO.simulationPeriodic();
+    indexerIO.simulationPeriodic();
   }
 }
