@@ -118,7 +118,7 @@ public final class Constants {
     public static final double HOOD_kV = 0.0;
 
     // Safety limits (mechanism rotations)
-    public static final double HOOD_MIN_ROT = 0.0;     // "0" = your stow/home angle
+    public static final double HOOD_MIN_ROT = 0.0;    
     public static final double HOOD_MAX_ROT = 0.590;   
 
     // Shot model 
@@ -155,7 +155,7 @@ public static final class IntakeConstants {
 public static final class IndexerConstants {
   private IndexerConstants() {}
 
-  // CAN IDsj
+  // CAN IDs
   public static final int BELTER_ID = 15;
 
   // Output
