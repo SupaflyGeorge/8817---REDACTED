@@ -105,7 +105,7 @@ public class RobotContainer {
       .whileTrue(Commands.runOnce(() -> shooter.setWantedState(ShooterSubsystem.WantedState.PREPARE_SHOT)))
       .whileFalse(Commands.runOnce(() -> shooter.setWantedState(ShooterSubsystem.WantedState.IDLE)));
 
-      // Hold = shoot (feeder enabled when ready), release = prepare (or idle, your choice)
+      // Hold = shoot (feeder enabled)
     joystick.rightTrigger()
       .whileTrue(Commands.runOnce(() -> shooter.setWantedState(ShooterSubsystem.WantedState.SHOOTING)))
       .whileFalse(Commands.runOnce(() -> shooter.setWantedState(ShooterSubsystem.WantedState.IDLE)));
